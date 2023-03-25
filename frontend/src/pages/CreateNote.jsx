@@ -22,7 +22,7 @@ const CreateContact = () => {
     const handleSubmit = async (event) =>{
       event.preventDefault()  
 
-      const res = await fetch(`http://127.0.0.1:8000/create`, {
+      const res = await fetch(`https://notetakerbackend.onrender.com/create`, {
         method : "POST",
         headers : {
             "Content-type": "application/json",

@@ -25,7 +25,7 @@ const EditContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    const res = await fetch(`http://127.0.0.1:8000/edit`, {
+    const res = await fetch(`https://notetakerbackend.onrender.com/edit`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -54,7 +54,7 @@ const EditContact = () => {
   useEffect(async () => {
     setLoading(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/note/${id}`, {
+      const res = await fetch(`https://notetakerbackend.onrender.com/note/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
