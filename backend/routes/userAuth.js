@@ -96,7 +96,7 @@ router.post("/login", async (req, res) => {
     if (!doesUserExists)
       return res
         .status(400)
-        .json({ error: `a user with email doesn't exists, please register first` });
+        .json({ error: `a user with this email doesn't exists, please register first` });
 
     // @ if there any user exists so we match the plain text password with hashed password
     const doesPasswordMatch = await bcrypt.compare(password, doesUserExists.password)
